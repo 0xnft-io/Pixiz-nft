@@ -32,6 +32,17 @@ export MNEMONIC="<metmask_mnemonic>"
 DEPLOY_PANDAS_SALE=1 yarn truffle deploy --network rinkeby
 ```
 
+
+```javascript
+  if (network === 'rinkeby') {
+    proxyRegistryAddress = "0xf57b2c51ded3a29e6891aba85459d600256cf317";
+  } else {
+    proxyRegistryAddress = "0xa5409ec958c83c3f309868babaca7c86dcb077c1";
+  }
+  
+  pixizContractAddress = "0x1436C8cDc82d6B52491edFa43F8C800b021819aa"
+```
+
 ### Minting Panda NFTs.
 
 After deploying to the Rinkeby network, there will be a contract on Rinkeby that will be viewable on [Rinkeby Etherscan](https://rinkeby.etherscan.io). For example, here is a [recently deployed contract](https://rinkeby.etherscan.io/address/0xeba05c5521a3b81e23d15ae9b2d07524bc453561). You should set this contract address and the address of your Metamask account as environment variables when running the minting script. If a [CreatureFactory was deployed](https://github.com/ProjectOpenSea/opensea-creatures/blob/master/migrations/2_deploy_contracts.js#L38), which the sample deploy steps above do, you'll need to specify its address below as it will be the owner on the NFT contract, and only it will have mint permissions. In that case, you won't need NFT_CONTRACT_ADDRESS, as all we need is the contract with mint permissions here.

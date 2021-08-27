@@ -39,6 +39,11 @@ yalc.lock
 # env files
 .env.rinkeby
 .env.mainnet
+.env.development
 
 client/node_modules
 client/.next
+
+.openzeppelin
+
+assets
